@@ -1,17 +1,45 @@
 #' @import cli
-#' @import glue
-
 
 ymd <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::ymd)
 }
 
+mdy <- function(.data,...){
+  log_date_time_parse(.data, .fun = lubridate::mdy)
+}
+
+ydm <- function(.data,...){
+  log_date_time_parse(.data, .fun = lubridate::ydm)
+}
+
+myd <- function(.data, ...){
+  log_data_time_parse(.data, .fun = lubridate::myd)
+}
+
+dmy <- function(.data, ...){
+  log_date_time_parse(.data, .fun = lubridate::dmy)
+}
+
+year <- function(.data, ...){
+  log_date_time_parse(.data, .fun = lubridate::year)
+}
+
+
 
 log_date_time_parse <- function(.data, .fun){
     dates_char <- as.character(.data)
 
-    # Silence the warning message from the dplyr::ymd package
-    parsed_dates <- .fun(dates_char, quiet = TRUE)
+    # Silence the warning message from the lubridate package
+
+    parsed_dates <- tryCatch({
+      expr = {parsed_dates <- .fun(dates_char, quiet = TRUE)
+      }
+    },
+    error = function(e){
+      parsed_dates <- .fun(dates_char)
+
+      }
+    )
 
     na_count_original <- sum(is.na(dates_char))
     na_count_parsed <- sum(is.na(parsed_dates))
