@@ -10,7 +10,8 @@ ymd <- function(.data, ...){
 log_date_time_parse <- function(.data, .fun){
     dates_char <- as.character(.data)
 
-    parsed_dates <- .fun(dates_char)
+    # Silence the warning message from the dplyr::ymd package
+    parsed_dates <- .fun(dates_char, quiet = TRUE)
 
     na_count_original <- sum(is.na(dates_char))
     na_count_parsed <- sum(is.na(parsed_dates))
@@ -18,32 +19,27 @@ log_date_time_parse <- function(.data, .fun){
 
     success_index <- which(!is.na(parsed_dates))[1]
     failed_index <- which(!is.na(dates_char) & is.na(parsed_dates))[1]
-    log_messages <- c(
-      glue::glue("NA values created by parsing: {new_na_count}")
-    )
+    cli_alert_danger("NA values created by parsing: {new_na_count}")
+
+
+
 
 
     # Add successful parse example if exists
     if (!is.na(success_index)) {
-      log_messages <- c(log_messages,
-                        glue::glue("Example successful parse:"),
-                        glue::glue("  Original: {dates_char[success_index]}"),
-                        glue::glue("  Parsed:   {parsed_dates[success_index]}")
-      )
+        cli_alert_success("Example successful parse:")
+        cli_alert("  Original: {dates_char[success_index]}")
+        cli_alert("  Parsed:   {parsed_dates[success_index]}")
     }
+
 
     # Add failed parse example if exists
     if (!is.na(failed_index)) {
-      log_messages <- c(log_messages,
-                        glue::glue("Example failed parse:"),
-                        glue::glue("  Original: {dates_char[failed_index]}"),
-                        glue::glue("  Parsed:   NA")
-      )
+
+      cli_alert_danger("Example failed parse:")
+      cli_alert("  Original: {dates_char[failed_index]}")
+      cli_alert("  Parsed:   NA")
     }
-
-    # Print all messages
-    cat(paste(log_messages, collapse = "\n"), "\n")
-
 }
 
 
