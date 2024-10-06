@@ -4,11 +4,11 @@ ymd <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::ymd)
 }
 
-mdy <- function(.data,...){
+mdy <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::mdy)
 }
 
-ydm <- function(.data,...){
+ydm <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::ydm)
 }
 
@@ -44,7 +44,6 @@ log_date_time_parse <- function(.data, .fun){
     na_count_original <- sum(is.na(dates_char))
     na_count_parsed <- sum(is.na(parsed_dates))
     new_na_count <- na_count_parsed - na_count_original
-
     success_index <- which(!is.na(parsed_dates))[1]
     failed_index <- which(!is.na(dates_char) & is.na(parsed_dates))[1]
     cli_alert_danger("NA values created by parsing: {new_na_count}")
