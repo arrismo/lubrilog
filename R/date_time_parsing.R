@@ -1,25 +1,26 @@
+#' @import lubridate
 #' @import cli
-
+#' @export
 ymd <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::ymd)
 }
-
+#' @export
 mdy <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::mdy)
 }
-
+#' @export
 ydm <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::ydm)
 }
-
+#' @export
 myd <- function(.data, ...){
-  log_data_time_parse(.data, .fun = lubridate::myd)
+  log_date_time_parse(.data, .fun = lubridate::myd)
 }
-
+#' @export
 dmy <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::dmy)
 }
-
+#' @export
 year <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::year)
 }
@@ -48,17 +49,12 @@ log_date_time_parse <- function(.data, .fun){
     failed_index <- which(!is.na(dates_char) & is.na(parsed_dates))[1]
     cli_alert_danger("NA values created by parsing: {new_na_count}")
 
-
-
-
-
     # Add successful parse example if exists
     if (!is.na(success_index)) {
         cli_alert_success("Example successful parse:")
         cli_alert("  Original: {dates_char[success_index]}")
         cli_alert("  Parsed:   {parsed_dates[success_index]}")
     }
-
 
     # Add failed parse example if exists
     if (!is.na(failed_index)) {
