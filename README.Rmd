@@ -20,15 +20,19 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
 <!-- badges: end -->
 
-The goal of lubrilog is to ...
+The goal of lubrilog is to provide feedback from a subset of `lubridate` functions such as `ymd`, `dmy`, and `year`.
+
+## Inspiration
+[tidylog](https://github.com/elbersb/tidylog/tree/master?tab=readme-ov-file)
+[lubridate](https://github.com/tidyverse/lubridate)
 
 ## Installation
 
-You can install the development version of lubrilog from [GitHub](https://github.com/) with:
+You can install the development version of lubrilog from GitHub with:
 
 ``` r
-# install.packages("pak")
-pak::pak("arrismo/lubrilog")
+# install.packages("devtools")
+devtools::install_github("arrismo/lubrilog")
 ```
 
 ## Example
@@ -40,18 +44,6 @@ library(lubrilog)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
 
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
