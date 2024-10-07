@@ -13,18 +13,26 @@ knitr::opts_chunk$set(
 )
 ```
 
+# lubridate <img src="man/figures/lubrilog.png" align="right"/>
+
 # lubrilog
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
+
+[![R-CMD-check](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml) [![Codecov test coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
+
 <!-- badges: end -->
 
 The goal of lubrilog is to provide feedback from a subset of `lubridate` functions such as `ymd`, `dmy`, and `year`.
 
-## Inspiration
-[tidylog](https://github.com/elbersb/tidylog/tree/master?tab=readme-ov-file)
-[lubridate](https://github.com/tidyverse/lubridate)
+## Inspirations
+
+`lubrilog` would not be possible without the following packages:
+
+-   [tidylog](https://github.com/elbersb/tidylog/tree/master?tab=readme-ov-file) package
+-   [lubridate](https://github.com/tidyverse/lubridate) package
+
+`lubrilog` is not affiliated with Posit/RStudio company or the `lubridate` developer team.
 
 ## Installation
 
@@ -44,6 +52,4 @@ library(lubrilog)
 ## basic example code
 ```
 
-
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-

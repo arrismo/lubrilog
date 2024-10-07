@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# lubridate <img src="man/figures/lubrilog.png" align="right"/>
+
 # lubrilog
 
 <!-- badges: start -->
@@ -8,15 +10,22 @@
 [![R-CMD-check](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
+
 <!-- badges: end -->
 
 The goal of lubrilog is to provide feedback from a subset of `lubridate`
 functions such as `ymd`, `dmy`, and `year`.
 
-## Inspiration
+## Inspirations
 
-[tidylog](https://github.com/elbersb/tidylog/tree/master?tab=readme-ov-file)
-[lubridate](https://github.com/tidyverse/lubridate)
+`lubrilog` would not be possible without the following packages:
+
+- [tidylog](https://github.com/elbersb/tidylog/tree/master?tab=readme-ov-file)
+  package
+- [lubridate](https://github.com/tidyverse/lubridate) package
+
+`lubrilog` is not affiliated with Posit/RStudio company or the
+`lubridate` developer team.
 
 ## Installation
 
