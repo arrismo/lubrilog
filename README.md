@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# lubrilog <img src="man/figures/lubrilog.png" align="right" height="140" width="139"/>
+# lubrilog <img src="man/figures/lubrilog.png" align="right" height="200" width="200"/>
 
 <!-- badges: start -->
 
