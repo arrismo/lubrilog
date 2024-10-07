@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# lubridate <img src="man/figures/lubrilog.png" align="right"/>
+# lubridate <img src="man/figures/lubrilog.png" align="right" height="120" width="139"/>
 
 # lubrilog
 

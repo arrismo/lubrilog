@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# lubridate <img src="man/figures/lubrilog.png" align="right"/>
+# lubridate <img src="man/figures/lubrilog.png" align="right" height="120" width="139"/>
 
 # lubrilog
 
