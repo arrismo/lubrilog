@@ -8,11 +8,11 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-"
+  fig.path = "man/figures/"
 )
 ```
 
-# lubrilog <img src="man/figures/lubrilog.png" align="right" height="200" width="200"/>
+# lubrilog <img src="man/figures/lubrilog.png" align="right" height="150" width="150"/>
 
 <!-- badges: start -->
 
