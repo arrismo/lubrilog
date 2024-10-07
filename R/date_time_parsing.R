@@ -4,6 +4,11 @@
 ymd <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::ymd)
 }
+
+
+
+
+
 #' @export
 mdy <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::mdy)
@@ -31,7 +36,6 @@ log_date_time_parse <- function(.data, .fun){
     dates_char <- as.character(.data)
 
     # Silence the warning message from the lubridate package
-
     parsed_dates <- tryCatch({
       expr = {parsed_dates <- .fun(dates_char, quiet = TRUE)
       }
