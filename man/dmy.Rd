@@ -1,17 +1,17 @@
 \name{dmy}
 \alias{dmy}
-\title{Wrapper function for lubridate::dmy}
+\title{Wrapper function around lubridate::dmy that gives feedback about parsed variable}
 \usage{
 dmy(.data, ...)
 }
 \arguments{
-\item{.data}{see \link[lubridate:dmy]{dmy}}
+\item{.data}{see \link[lubridate:ymd]{dmy}}
 
-\item{...}{see \link[lubridate:dmy]{dmy}}
+\item{...}{see \link[lubridate:ymd]{dmy}}
 }
 \value{
-see \link[lubridate:dmy]{dmy}
+see \link[lubridate:ymd]{dmy}
 }
 \description{
-Wrapper function for lubridate::dmy
+Wrapper function around lubridate::dmy that gives feedback about parsed variable
 }

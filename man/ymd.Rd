@@ -1,6 +1,6 @@
 \name{ymd}
 \alias{ymd}
-\title{Wrapper function for  lubridate::ymd}
+\title{Wrapper function around lubridate::ymd that gives feedback about parsed variable}
 \usage{
 ymd(.data, ...)
 }
@@ -13,5 +13,5 @@ ymd(.data, ...)
 see \link[lubridate:ymd]{ymd}
 }
 \description{
-Wrapper function for lubridate::ymd
+Wrapper function around lubridate::ymd that gives feedback about parsed variable
 }

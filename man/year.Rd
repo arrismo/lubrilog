@@ -1,6 +1,6 @@
 \name{year}
 \alias{year}
-\title{Wrapper function for  lubridate::year}
+\title{Wrapper function around lubridate::year that gives feedback about parsed variable}
 \usage{
 year(.data, ...)
 }
@@ -13,5 +13,5 @@ year(.data, ...)
 see \link[lubridate:year]{year}
 }
 \description{
-Wrapper function lubridate::year
+Wrapper function around lubridate::year that gives feedback about parsed variable
 }

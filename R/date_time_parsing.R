@@ -4,11 +4,6 @@
 ymd <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::ymd)
 }
-
-
-
-
-
 #' @export
 mdy <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::mdy)

@@ -1,6 +1,6 @@
 \name{ydm}
 \alias{ydm}
-\title{Wrapper function for lubridate::ydm}
+\title{Wrapper function around lubridate::ydm that gives feedback about parsed variable}
 \usage{
 ydm(.data, ...)
 }
@@ -13,5 +13,5 @@ ydm(.data, ...)
 see \link[lubridate:ymd]{ydm}
 }
 \description{
-Wrapper function for lubridate::ydm
+Wrapper function around lubridate::ydm that gives feedback about parsed variable
 }

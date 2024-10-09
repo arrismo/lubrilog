@@ -1,5 +1,3 @@
-unlink("man", recursive = TRUE)
-devtools::document(roclets = c('rd', 'collate', 'namespace'))
 library(glue)
 library(lubridate)
 library(stringr)
@@ -14,8 +12,7 @@ functions <- sub("\\)", "", functions)
 
 template <- "\\name{<f>}
 \\alias{<f>}
-\\title{Wrapper around <package>::<f>
-that prints information about the operation}
+\\title{Wrapper function around <package>::<f> that gives feedback about parsed variable}
 \\usage{
 <usage>
 }
@@ -26,8 +23,7 @@ that prints information about the operation}
 see \\link[<package><topic>]{<f>}
 }
 \\description{
-Wrapper around <package>::<f>
-that prints information about the operation
+Wrapper function around <package>::<f> that gives feedback about parsed variable
 }"
 
 package <- "lubridate"
