@@ -47,11 +47,11 @@ log_date_time_parse <- function(.data, .fun){
     success_index <- which(!is.na(parsed_dates))[1]
     failed_index <- which(!is.na(dates_char) & is.na(parsed_dates))[1]
 
-    if(new_na_count ){
-
-
+    if(new_na_count > 0){
+      cli_alert_danger("NA values created by parsing: {new_na_count}")
+    } else {
+      cli_alert_success("NA values created by parsing: {new_na_count}")
     }
-    cli_alert_danger("NA values created by parsing: {new_na_count}")
 
     # Add successful parse example if exists
     if (!is.na(success_index)) {
