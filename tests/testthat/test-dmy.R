@@ -5,10 +5,7 @@ data <- lubrilog::games
 
 
 f <- function(){
-  cli_alert_danger("NA values created by parsing:")
-  cli_alert_danger("Example failed parse:")
-  cli_alert("  Original: {dates_char[failed_index]}")
-  cli_alert("  Parsed:   NA")
+  lubrilog::dmy(data$release_date)
 }
 
 test_that("dmy works", {
@@ -17,5 +14,8 @@ test_that("dmy works", {
     )
   expect_equal(length(out), nrow(data))
 
+  expect_message(f(), "NA values created by parsing")
+  expect_message(f(), "Original:")
+  expect_message(f(), "Parsed:")
 })
 
