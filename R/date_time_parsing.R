@@ -62,7 +62,9 @@ log_date_time_parse <- function(.data, .fun){
       cli_alert("  Original: {dates_char[failed_index]}")
       cli_alert("  Parsed:   NA")
     }
+    parsed_dates
 }
+
 
 
 
