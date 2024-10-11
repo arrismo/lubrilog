@@ -2,15 +2,16 @@ library(lubrilog)
 library(cli)
 
 data <- lubrilog::games
+data$parsed_date <- lubrilog::mdy(data$release_date)
 
 
 f <- function(){
-  lubrilog::year(data$release_date)
+  lubrilog::year(data$parsed_date)
 }
 
 test_that("year works", {
   expect_message(
-    out <- lubrilog::year(data$release_date)
+    out <- lubrilog::year(data$parsed_date)
   )
   expect_equal(length(out), nrow(data))
 
