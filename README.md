@@ -30,61 +30,9 @@ on Steam. For more information use:
 
 ## Installation
 
-``` r
-# The easiest way to install lubrilog is directly from cran:
-install.packages("lubrilog")
-#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c6d7e6211'
-#> (as 'lib' is unspecified)
-#> Warning: package 'lubrilog' is not available for this version of R
-#> 
-#> A version of this package for your version of R might be available elsewhere,
-#> see the ideas at
-#> https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
-
-# Or you can install the development version of lubrilog from GitHub with:
-# install.packages("devtools")
-devtools::install_github("arrismo/lubrilog")
-#> Using GitHub PAT from the git credential store.
-#> Downloading GitHub repo arrismo/lubrilog@HEAD
-#> cpp11 (0.4.7 -> 0.5.0) [CRAN]
-#> Installing 1 packages: cpp11
-#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c6d7e6211'
-#> (as 'lib' is unspecified)
-#> package 'cpp11' successfully unpacked and MD5 sums checked
-#> 
-#> The downloaded binary packages are in
-#>  C:\Users\mmois\AppData\Local\Temp\RtmpkRztol\downloaded_packages
-#> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>       ✔  checking for file 'C:\Users\mmois\AppData\Local\Temp\RtmpkRztol\remotes30406ccb361e\arrismo-lubrilog-dba3c8e/DESCRIPTION' (358ms)
-#>       ─  preparing 'lubrilog':
-#>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information
-#>       ─  checking for LF line-endings in source and make files and shell scripts (525ms)
-#>   ─  checking for empty or unneeded directories
-#>       ─  building 'lubrilog_1.0.0.tar.gz'
-#>      
-#> 
-#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c6d7e6211'
-#> (as 'lib' is unspecified)
-```
-
 ## Example
 
 Load `lubrilog` and `lubridate`:
-
-``` r
-library("lubridate")
-#> 
-#> Attaching package: 'lubridate'
-#> The following objects are masked from 'package:base':
-#> 
-#>     date, intersect, setdiff, union
-library("lubrilog")
-#> 
-#> Attaching package: 'lubrilog'
-#> The following objects are masked from 'package:lubridate':
-#> 
-#>     dmy, mdy, myd, ydm, year, ymd
-```
 
 Using the `games` data set let’s clean our `release_date` column:
 
