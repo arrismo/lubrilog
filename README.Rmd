@@ -66,8 +66,8 @@ head(games)
 
 Lubrilog will give you information about the `lubridate` operation.:
 
-```{r}
-mdy(games$release_date)
+```{r,R.options=list(max.print=15)}
+head(mdy(games$release_date))
 ```
 
 ## Suggestions
