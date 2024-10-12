@@ -1,6 +1,6 @@
 Package: lubrilog
 Title: Provides Feedback for 'lubridate' Functions
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: 
     person("Mikael", "Moise", email = "mikaelmoise00@gmail.com", role = c("aut", "cre","cph"))
 Description: Provides feedback for a subset of 'lubridate' functions.
