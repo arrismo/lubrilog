@@ -6,3 +6,4 @@
 ^generate_docs.R
 ^codecov\.yml$
 ^cran-comments\.md$
+^CRAN-SUBMISSION$
