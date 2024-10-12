@@ -16,11 +16,18 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
+[![R-CMD-check](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml) [![Codecov test coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
+
 <!-- badges: end -->
 
-The goal of lubrilog is to provide feedback from a subset of `lubridate` functions such as `ymd`, `dmy`, and `year`.
+The goal of lubrilog is to provide feedback from a subset of `lubridate` functions such as `ymd`, `dmy`, `mdy` and `year`.
+
+lubrilog contains a `games` dataset which is a subset of data from games on Steam. For more information use:
+
+```{r eval=FALSE, include=FALSE}
+library(lubrilog)
+?games
+```
 
 ## Inspirations
 
@@ -33,20 +40,40 @@ The goal of lubrilog is to provide feedback from a subset of `lubridate` functio
 
 ## Installation
 
-You can install the development version of lubrilog from GitHub with:
+```{r}
+# The easiest way to install lubrilog is directly from cran:
+install.packages("lubrilog")
 
-``` r
+# Or you can install the development version of lubrilog from GitHub with:
 # install.packages("devtools")
 devtools::install_github("arrismo/lubrilog")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
+Load `lubrilog` and `lubridate`:
 ```{r example}
-library(lubrilog)
-## basic example code
+library("lubridate")
+library("lubrilog")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+Using the `games` data set let's clean our `release_date` column:
+```{r}
+head(games)
+```
+
+Lubrilog will give you information about the `lubridate` operation.:
+```{r}
+mdy(games$release_date)
+```
+
+## Suggestions
+
+Lubrilog, when paired with `tidylog`, offers a powerful and effective solution, making it a highly valuable tool:
+```{r}
+library("dplyr")
+library("tidylog",warn.conflicts = FALSE)
+games_parsed <- games %>% 
+  tidylog::mutate(new_data = mdy(release_date))
+```
+
