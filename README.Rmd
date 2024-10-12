@@ -41,7 +41,7 @@ library(lubrilog)
 ## Installation
 
 ```{r message=FALSE, warning=FALSE, eval = FALSE}
-# The easiest way to install lubrilog is directly from cran:
+# The easiest way to install lubrilog is directly from CRAN:
 install.packages("lubrilog")
 
 # Or you can install the development version of lubrilog from GitHub with:
@@ -74,7 +74,7 @@ head(mdy(games$release_date))
 
 Lubrilog, when paired with `tidylog`, offers a powerful and effective solution, making it a highly valuable tool:
 
-```{r}
+```{r, message= FALSE}
 library("dplyr")
 library("tidylog",warn.conflicts = FALSE)
 games_parsed <- games %>% 

@@ -36,7 +36,7 @@ library(lubrilog)
 ## Installation
 
 ``` r
-# The easiest way to install lubrilog is directly from cran:
+# The easiest way to install lubrilog is directly from CRAN:
 install.packages("lubrilog")
 
 # Or you can install the development version of lubrilog from GitHub with:
@@ -89,14 +89,6 @@ solution, making it a highly valuable tool:
 
 ``` r
 library("dplyr")
-#> 
-#> Attaching package: 'dplyr'
-#> The following objects are masked from 'package:stats':
-#> 
-#>     filter, lag
-#> The following objects are masked from 'package:base':
-#> 
-#>     intersect, setdiff, setequal, union
 library("tidylog",warn.conflicts = FALSE)
 games_parsed <- games %>% 
   tidylog::mutate(new_data = mdy(release_date))
@@ -104,5 +96,4 @@ games_parsed <- games %>%
 #> ℹ In argument: `new_data = mdy(release_date)`.
 #> Caused by warning:
 #> !  465 failed to parse.
-#> mutate: new variable 'new_data' (Date) with 1,932 unique values and 4% NA
 ```
