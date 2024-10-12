@@ -2,7 +2,7 @@ Package: lubrilog
 Title: Provides feedback for 'lubridate' functions
 Version: 1.0.0
 Authors@R: 
-    person("Mikael", "Moise", email = "mikealmoise00@gmail.com", role = c("aut", "cre"))
+    person("Mikael", "Moise", email = "mikealmoise00@gmail.com", role = c("aut", "cre","cph"))
 Description: Provides feedback for a subset of 'lubridate' functions.
 License: GPL (>= 3)
 Encoding: UTF-8
@@ -17,3 +17,5 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+URL: https://github.com/arrismo/lubrilog
+BugReports: https://github.com/arrismo/lubrilog/issues
