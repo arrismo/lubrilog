@@ -52,17 +52,20 @@ devtools::install_github("arrismo/lubrilog")
 ## Example
 
 Load `lubrilog` and `lubridate`:
+
 ```{r example}
 library("lubridate")
 library("lubrilog")
 ```
 
 Using the `games` data set let's clean our `release_date` column:
+
 ```{r}
 head(games)
 ```
 
 Lubrilog will give you information about the `lubridate` operation.:
+
 ```{r}
 mdy(games$release_date)
 ```
@@ -70,10 +73,10 @@ mdy(games$release_date)
 ## Suggestions
 
 Lubrilog, when paired with `tidylog`, offers a powerful and effective solution, making it a highly valuable tool:
+
 ```{r}
 library("dplyr")
 library("tidylog",warn.conflicts = FALSE)
 games_parsed <- games %>% 
   tidylog::mutate(new_data = mdy(release_date))
 ```
-

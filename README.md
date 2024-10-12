@@ -33,7 +33,7 @@ on Steam. For more information use:
 ``` r
 # The easiest way to install lubrilog is directly from cran:
 install.packages("lubrilog")
-#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c306426bc'
+#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c5c071eb5'
 #> (as 'lib' is unspecified)
 #> Warning: package 'lubrilog' is not available for this version of R
 #> 
@@ -48,22 +48,22 @@ devtools::install_github("arrismo/lubrilog")
 #> Downloading GitHub repo arrismo/lubrilog@HEAD
 #> cpp11 (0.4.7 -> 0.5.0) [CRAN]
 #> Installing 1 packages: cpp11
-#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c306426bc'
+#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c5c071eb5'
 #> (as 'lib' is unspecified)
 #> package 'cpp11' successfully unpacked and MD5 sums checked
 #> 
 #> The downloaded binary packages are in
-#>  C:\Users\mmois\AppData\Local\Temp\Rtmp2vLo6n\downloaded_packages
+#>  C:\Users\mmois\AppData\Local\Temp\Rtmpkb2wvy\downloaded_packages
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#>       ✔  checking for file 'C:\Users\mmois\AppData\Local\Temp\Rtmp2vLo6n\remotes4b3024dd3473\arrismo-lubrilog-7e5ec2d/DESCRIPTION'
+#>          checking for file 'C:\Users\mmois\AppData\Local\Temp\Rtmpkb2wvy\remotes410074cb1a85\arrismo-lubrilog-4fd012d/DESCRIPTION' ...  ✔  checking for file 'C:\Users\mmois\AppData\Local\Temp\Rtmpkb2wvy\remotes410074cb1a85\arrismo-lubrilog-4fd012d/DESCRIPTION'
 #>       ─  preparing 'lubrilog':
 #>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   ✔  checking DESCRIPTION meta-information
 #>       ─  checking for LF line-endings in source and make files and shell scripts
-#>       ─  checking for empty or unneeded directories
+#>   ─  checking for empty or unneeded directories
 #>       ─  building 'lubrilog_1.0.0.tar.gz'
 #>      
 #> 
-#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c306426bc'
+#> Installing package into 'C:/Users/mmois/AppData/Local/Temp/RtmpCaW2Rb/temp_libpath103c5c071eb5'
 #> (as 'lib' is unspecified)
 ```
 
