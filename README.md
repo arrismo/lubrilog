@@ -17,6 +17,11 @@ functions such as `ymd`, `dmy`, `mdy` and `year`.
 lubrilog contains a `games` dataset which is a subset of data from games
 on Steam. For more information use:
 
+``` r
+library(lubrilog)
+?games
+```
+
 ## Inspirations
 
 `lubrilog` would not be possible without the following packages:
@@ -30,9 +35,23 @@ on Steam. For more information use:
 
 ## Installation
 
+``` r
+# The easiest way to install lubrilog is directly from cran:
+install.packages("lubrilog")
+
+# Or you can install the development version of lubrilog from GitHub with:
+# install.packages("devtools")
+devtools::install_github("arrismo/lubrilog")
+```
+
 ## Example
 
 Load `lubrilog` and `lubridate`:
+
+``` r
+library("lubridate")
+library("lubrilog")
+```
 
 Using the `games` data set let’s clean our `release_date` column:
 
@@ -58,13 +77,7 @@ Lubrilog will give you information about the `lubridate` operation.:
 
 ``` r
 head(mdy(games$release_date))
-#> ✖ NA values created by parsing: 465
-#> ✔ Example successful parse:
-#> →   Original: Nov 1 2000
-#> →   Parsed:   2000-11-01
-#> ✖ Example failed parse:
-#> →   Original: Coming Soon
-#> →   Parsed:   NA
+#> Warning: 465 failed to parse.
 #> [1] "2000-11-01" "1999-04-01" "2003-05-01" "2001-06-01" "1999-11-01"
 #> [6] "2000-11-01"
 ```
@@ -87,12 +100,9 @@ library("dplyr")
 library("tidylog",warn.conflicts = FALSE)
 games_parsed <- games %>% 
   tidylog::mutate(new_data = mdy(release_date))
-#> ✖ NA values created by parsing: 465
-#> ✔ Example successful parse:
-#> →   Original: Nov 1 2000
-#> →   Parsed:   2000-11-01
-#> ✖ Example failed parse:
-#> →   Original: Coming Soon
-#> →   Parsed:   NA
+#> Warning: There was 1 warning in `.fun()`.
+#> ℹ In argument: `new_data = mdy(release_date)`.
+#> Caused by warning:
+#> !  465 failed to parse.
 #> mutate: new variable 'new_data' (Date) with 1,932 unique values and 4% NA
 ```

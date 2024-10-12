@@ -4,7 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -24,7 +24,7 @@ The goal of lubrilog is to provide feedback from a subset of `lubridate` functio
 
 lubrilog contains a `games` dataset which is a subset of data from games on Steam. For more information use:
 
-```{r eval=FALSE, include=FALSE}
+```{r}
 library(lubrilog)
 ?games
 ```
@@ -40,7 +40,7 @@ library(lubrilog)
 
 ## Installation
 
-```{r include=FALSE}
+```{r message=FALSE, warning=FALSE, eval = FALSE}
 # The easiest way to install lubrilog is directly from cran:
 install.packages("lubrilog")
 
@@ -53,7 +53,7 @@ devtools::install_github("arrismo/lubrilog")
 
 Load `lubrilog` and `lubridate`:
 
-```{r example, include=FALSE}
+```{r example, message = FALSE}
 library("lubridate")
 library("lubrilog")
 ```
