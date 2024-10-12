@@ -5,3 +5,4 @@
 ^\.github$
 ^generate_docs.R
 ^codecov\.yml$
+^cran-comments\.md$

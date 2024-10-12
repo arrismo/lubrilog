@@ -14,5 +14,6 @@
 #'  \item{price}{Initial Price at release date}
 #' }
 #'
-#' @source <https://www.kaggle.com/datasets/ibriiee/stream-game-date>
+#' @source
+#' [Steam Data](https://www.kaggle.com/datasets/ibriiee/stream-game-date)
 "games"

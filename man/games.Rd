@@ -20,7 +20,7 @@ A data frame with 13,357 rows and 7 columns:
 }
 }
 \source{
-\url{https://www.kaggle.com/datasets/ibriiee/stream-game-date}
+\href{https://www.kaggle.com/datasets/ibriiee/stream-game-date}{Steam Data}
 }
 \usage{
 games
