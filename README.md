@@ -46,54 +46,31 @@ devtools::install_github("arrismo/lubrilog")
 
 ## Example
 
-Load `lubrilog` and `lubridate`:
+Load `lubrilog`:
 
 ``` r
-library("lubridate")
 library("lubrilog")
 ```
 
 Using the `games` data set let’s clean our `release_date` column:
 
 ``` r
-head(games)
-#>   id                      name release_date platform_windows platform_linux
-#> 1  1            Counter-Strike   Nov 1 2000             TRUE           TRUE
-#> 2  2     Team Fortress Classic   Apr 1 1999             TRUE           TRUE
-#> 3  3             Day of Defeat   May 1 2003             TRUE           TRUE
-#> 4  4        Deathmatch Classic   Jun 1 2001             TRUE           TRUE
-#> 5  5 Half-Life: Opposing Force   Nov 1 1999             TRUE           TRUE
-#> 6  6                  Ricochet   Nov 1 2000             TRUE           TRUE
-#>   platform_mac price
-#> 1         TRUE  9.99
-#> 2         TRUE  4.99
-#> 3         TRUE  4.99
-#> 4         TRUE  4.99
-#> 5         TRUE  4.99
-#> 6         TRUE  4.99
+head(games$release_date)
+#> [1] "Nov 1 2000" "Apr 1 1999" "May 1 2003" "Jun 1 2001" "Nov 1 1999"
+#> [6] "Nov 1 2000"
 ```
 
-Lubrilog will give you information about the `lubridate` operation.:
+Lubrilog will give you information about the `lubridate` operation:
 
 ``` r
 head(mdy(games$release_date))
-#> Warning: 465 failed to parse.
+#> ✖ NA values created by parsing: 465
+#> ✔ Example successful parse:
+#> →   Original: Nov 1 2000
+#> →   Parsed:   2000-11-01
+#> ✖ Example failed parse:
+#> →   Original: Coming Soon
+#> →   Parsed:   NA
 #> [1] "2000-11-01" "1999-04-01" "2003-05-01" "2001-06-01" "1999-11-01"
 #> [6] "2000-11-01"
-```
-
-## Suggestions
-
-Lubrilog, when paired with `tidylog`, offers a powerful and effective
-solution, making it a highly valuable tool:
-
-``` r
-library("dplyr")
-library("tidylog",warn.conflicts = FALSE)
-games_parsed <- games %>% 
-  tidylog::mutate(new_data = mdy(release_date))
-#> Warning: There was 1 warning in `.fun()`.
-#> ℹ In argument: `new_data = mdy(release_date)`.
-#> Caused by warning:
-#> !  465 failed to parse.
 ```
