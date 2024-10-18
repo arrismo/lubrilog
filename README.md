@@ -30,9 +30,6 @@ library(lubrilog)
   package
 - [lubridate](https://github.com/tidyverse/lubridate) package
 
-`lubrilog` is not affiliated with Posit/RStudio company or the
-`lubridate` developer team.
-
 ## Installation
 
 ``` r
