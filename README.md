@@ -9,7 +9,7 @@
 [![Codecov test
 coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
 [![CRAN](https://img.shields.io/cran/v/lubrilog)](https://cran.r-project.org/package=lubrilog)
-\[![CRAN](https://cranlogs.r-pkg.org/badges/lubrilog)
+![CRAN](https://cranlogs.r-pkg.org/badges/lubrilog)
 
 <!-- badges: end -->
 
