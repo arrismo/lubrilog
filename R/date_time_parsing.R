@@ -25,6 +25,65 @@ year <- function(.data, ...){
   log_date_time_parse(.data, .fun = lubridate::year)
 }
 
+#' @export
+yq <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::yq)
+}
+#' @export
+ym <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::ym)
+}
+#' @export
+my <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::my)
+}
+
+#' @export
+ydm_h <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::ydm_h)
+}
+#' @export
+ymd_h <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::ymd_h)
+}
+#' @export
+dmy_h <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::dmy_h)
+}
+#' @export
+mdy_h <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::mdy_h)
+}
+#' @export
+ymd_hms <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::ymd_hms)
+}
+#' @export
+dmy_hms <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::dmy_hms)
+}
+#' @export
+mdy_hms <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::mdy_hms)
+}
+#' @export
+ydm_hms <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::ydm_hms)
+}
+#' @export
+ms <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::ms)
+}
+#' @export
+hm <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::hm)
+}
+#' @export
+hms <- function(.data, ...) {
+  log_date_time_parse(.data, .fun = lubridate::hms)
+}
+
+
 
 
 log_date_time_parse <- function(.data, .fun){
@@ -55,7 +114,7 @@ log_date_time_parse <- function(.data, .fun){
 
     # Add successful parse example if exists
     if (!is.na(success_index)) {
-        cli_alert_success("Example successful parse:")
+        cli_alert_success("Successful parse:")
         cli_alert("  Original: {dates_char[success_index]}")
         cli_alert("  Parsed:   {parsed_dates[success_index]}")
     }
@@ -63,7 +122,7 @@ log_date_time_parse <- function(.data, .fun){
     # Add failed parse example if exists
     if (!is.na(failed_index)) {
 
-      cli_alert_danger("Example failed parse:")
+      cli_alert_danger("Failed parse:")
       cli_alert("  Original: {dates_char[failed_index]}")
       cli_alert("  Parsed:   NA")
     }

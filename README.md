@@ -8,6 +8,8 @@
 [![R-CMD-check](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/arrismo/lubrilog/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/arrismo/lubrilog/graph/badge.svg)](https://app.codecov.io/gh/arrismo/lubrilog)
+[![CRAN](https://img.shields.io/cran/v/lubrilog)](https://cran.r-project.org/package=lubrilog)
+\[![CRAN](https://cranlogs.r-pkg.org/badges/lubrilog)
 
 <!-- badges: end -->
 
@@ -62,10 +64,10 @@ Lubrilog will give you information about the `lubridate` operation:
 ``` r
 head(mdy(games$release_date))
 #> ✖ NA values created by parsing: 465
-#> ✔ Example successful parse:
+#> ✔ Successful parse:
 #> →   Original: Nov 1 2000
 #> →   Parsed:   2000-11-01
-#> ✖ Example failed parse:
+#> ✖ Failed parse:
 #> →   Original: Coming Soon
 #> →   Parsed:   NA
 #> [1] "2000-11-01" "1999-04-01" "2003-05-01" "2001-06-01" "1999-11-01"

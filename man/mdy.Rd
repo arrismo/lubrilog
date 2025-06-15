@@ -5,12 +5,12 @@
 mdy(.data, ...)
 }
 \arguments{
-\item{.data}{see \link[lubridate:ymd]{mdy}}
+\item{.data}{see \link[lubridate:mdy]{mdy}}
 
-\item{...}{see \link[lubridate:ymd]{mdy}}
+\item{...}{see \link[lubridate:mdy]{mdy}}
 }
 \value{
-see \link[lubridate:ymd]{mdy}
+see \link[lubridate:mdy]{mdy}
 }
 \description{
 Wrapper function around lubridate::mdy that gives feedback about parsed variable

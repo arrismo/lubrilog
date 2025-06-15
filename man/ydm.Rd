@@ -5,12 +5,12 @@
 ydm(.data, ...)
 }
 \arguments{
-\item{.data}{see \link[lubridate:ymd]{ydm}}
+\item{.data}{see \link[lubridate:ydm]{ydm}}
 
-\item{...}{see \link[lubridate:ymd]{ydm}}
+\item{...}{see \link[lubridate:ydm]{ydm}}
 }
 \value{
-see \link[lubridate:ymd]{ydm}
+see \link[lubridate:ydm]{ydm}
 }
 \description{
 Wrapper function around lubridate::ydm that gives feedback about parsed variable
