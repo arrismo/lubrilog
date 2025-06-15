@@ -1,6 +1,6 @@
 Package: lubrilog
 Title: Get Insights on 'lubridate' Operations
-Version: 1.2.0
+Version: 1.3.0
 Authors@R: 
     person("Mikael", "Moise", email = "mikaelmoise00@gmail.com", role = c("aut", "cre","cph"))
 Description: Provides a set of tools designed to enhance transparency and understanding of date-time manipulation functions from the 'lubridate' package. 

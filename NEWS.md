@@ -1,4 +1,4 @@
-# lubrilog 1.2.0
+# lubrilog 1.3.0
 
 * Adding more logging for additional lubridate functions
 
