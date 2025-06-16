@@ -22,13 +22,6 @@ knitr::opts_chunk$set(
 
 The goal of lubrilog is to provide feedback from a subset of `lubridate` functions such as `ymd`, `dmy`, `mdy` and `year`.
 
-lubrilog contains a `games` dataset which is a subset of data from games on Steam. For more information use:
-
-```{r}
-library(lubrilog)
-?games
-```
-
 ## Inspirations
 
 `lubrilog` would not be possible without the following packages:
@@ -45,6 +38,10 @@ install.packages("lubrilog")
 # Or you can install the development version of lubrilog from GitHub with:
 # install.packages("devtools")
 devtools::install_github("arrismo/lubrilog")
+
+# install with renv
+renv::install("lubrilog")
+renv::snapshot()
 ```
 
 ## Example
